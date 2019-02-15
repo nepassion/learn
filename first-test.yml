@@ -1,0 +1,6 @@
+test:
+  user:
+    name: mick
+require:
+  steve:
+    man-child: ddff
