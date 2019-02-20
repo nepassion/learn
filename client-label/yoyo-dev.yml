@@ -1,5 +1,12 @@
 server:
-  port: 8754
+  port: 8081
+
 test:
   user:
     name: eminem
+
+eureka:
+  client: 
+    registry-fetch-interval-seconds: 10 #从eureka 服务器获得响应， 默认30秒
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
