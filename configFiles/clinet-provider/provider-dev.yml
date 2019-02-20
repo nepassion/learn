@@ -1,0 +1,16 @@
+test:
+  user:
+    name: this is the provider-dev
+
+server:
+  port: 8081
+spring:
+  application:
+    name: xxxx
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    appname: ${spring.application.name}
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

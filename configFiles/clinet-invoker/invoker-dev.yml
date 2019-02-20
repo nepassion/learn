@@ -1,0 +1,18 @@
+test:
+  user:
+    name: this is the invoker-dev
+
+server:
+  port: 9000
+spring:
+  application:
+    name: invoker-server
+eureka:
+  instance:
+    instance-id: invoker
+    hostname: 127.0.0.1
+    appname: ${spring.application.name}
+  client:
+    registry-fetch-interval-seconds: 10
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
