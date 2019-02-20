@@ -7,6 +7,9 @@ server:
 spring:
   application:
     name: invoker-server
+feign:
+  hystrix:
+    enabled: true
 eureka:
   instance:
     instance-id: invoker
