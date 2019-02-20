@@ -6,7 +6,7 @@ server:
   port: 8081
 spring:
   application:
-    name: provider
+    name: provider-server
 eureka:
   instance:
     hostname: 127.0.0.1

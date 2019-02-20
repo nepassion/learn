@@ -12,7 +12,24 @@ eureka:
     hostname: 127.0.0.1
     appname: ${spring.application.name}
   client:
+    registry-fetch-interval-seconds: 10
     instance:
       instance-id: zuul
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+zuul:
+  routes:
+    person:
+      path: /person/**
+      serviceId: invoker-server
+    invoker-server: 
+      path: /emp/**
+    thirth:
+      path: /thirth/**
+      url: invoker-server
+    routeTest: 
+      path: /**
+      url: http://www.baidu.com
+    routeForward:
+      path: /forward/**
+      url: forward:/zu
