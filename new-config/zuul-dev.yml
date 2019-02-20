@@ -1,0 +1,18 @@
+test:
+  user:
+    name: this is the zuul-dev
+
+server:
+  port: 5210
+spring:
+  application:
+    name: zuul-server
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    appname: ${spring.application.name}
+  client:
+    instance:
+      instance-id: zuul
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
