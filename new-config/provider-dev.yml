@@ -6,11 +6,12 @@ server:
   port: 8081
 spring:
   application:
-    name: xxxx
+    name: provider-dev
 eureka:
   instance:
     hostname: 127.0.0.1
     appname: ${spring.application.name}
   client:
+    registry-fetch-interval-seconds: 10
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
